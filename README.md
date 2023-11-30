@@ -23,31 +23,31 @@ This is a basic Inventory Management System (IMS) built with Laravel. The applic
 
 ## Learning Setup
 
-# Clone the repository
+### Clone the repository
 
 git clone https://github.com/Eritra064/laravel-inventory.git
 
-# Navigate to the project directory
+### Navigate to the project directory
 
 cd your-project-directory
 
-# Install dependencies
+### Install dependencies
 
 composer install
 
-# Copy the .env.example file and update the database configuration
+### Copy the .env.example file and update the database configuration
 
 cp .env.example .env
 
-# Generate the application key
+### Generate the application key
 
 php artisan key:generate
 
-# Run migrations and seed the database
+### Run migrations and seed the database
 
 php artisan migrate --seed
 
-# Start the development server
+### Start the development server
 
 php artisan serve
 
@@ -57,7 +57,7 @@ Visit 'http://localhost:8000' in your browser to access the application.
 
 The application uses a MySQL database with a products table containing fields: id, name, quantity, price, description, edit and delete fields.
 
-### Product Management
+## Product Management
 
 CRUD operations for products are implemented, allowing users to add, view, update, and delete product details. Basic form validation is in place to ensure data integrity.
 

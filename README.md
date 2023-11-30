@@ -11,56 +11,68 @@
 
 This is a basic Inventory Management System (IMS) built with Laravel. The application allows users to manage product details with essential CRUD operations. The project is focused on simplicity, adhering to Laravel best practices, and providing a user-friendly interface.
 
--   [Simple, fast routing engine](https://laravel.com/docs/routing).
--   [Powerful dependency injection container](https://laravel.com/docs/container).
--   Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
--   Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
--   Database agnostic [schema migrations](https://laravel.com/docs/migrations).
--   [Robust background job processing](https://laravel.com/docs/queues).
--   [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Table of Contents
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+1. Laravel Setup
+2. Database Design
+3. Product Management
+4. User Interface
+5. Authentication
+6. Routing and Controllers
+7. Documentation
 
-## Learning Laravel
+## Learning Setup
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# Clone the repository
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+git clone https://github.com/Eritra064/laravel-inventory.git
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+# Navigate to the project directory
 
-## Laravel Sponsors
+cd your-project-directory
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+# Install dependencies
 
-### Premium Partners
+composer install
 
--   **[Vehikl](https://vehikl.com/)**
--   **[Tighten Co.](https://tighten.co)**
--   **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
--   **[64 Robots](https://64robots.com)**
--   **[Cubet Techno Labs](https://cubettech.com)**
--   **[Cyber-Duck](https://cyber-duck.co.uk)**
--   **[Many](https://www.many.co.uk)**
--   **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
--   **[DevSquad](https://devsquad.com)**
--   **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
--   **[OP.GG](https://op.gg)**
--   **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
--   **[Lendio](https://lendio.com)**
+# Copy the .env.example file and update the database configuration
 
-## Contributing
+cp .env.example .env
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+# Generate the application key
 
-## Code of Conduct
+php artisan key:generate
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# Run migrations and seed the database
 
-## Security Vulnerabilities
+php artisan migrate --seed
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+# Start the development server
 
-## License
+php artisan serve
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Visit 'http://localhost:8000' in your browser to access the application.
+
+## Database Design
+
+The application uses a MySQL database with a products table containing fields: id, name, quantity, price, description, edit and delete fields.
+
+### Product Management
+
+CRUD operations for products are implemented, allowing users to add, view, update, and delete product details. Basic form validation is in place to ensure data integrity.
+
+## User Interface
+
+The front-end is developed using Laravel Blade, providing a simple and user-friendly interface for product management.
+
+## Authentication
+
+A basic authentication system is set up using Laravel Breeze. CRUD operations are accessible only to logged-in users.
+
+## Routing and Controllers
+
+Efficient Laravel routing and controllers are utilized, following RESTful principles where applicable.
+
+## Documentation
+
+For detailed instructions on setting up and using the application, please refer to the <a href="https://laravel.com/">Laravel</a>.
